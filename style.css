@@ -26,7 +26,7 @@ body {
 #profile img {
   width: 120px;
   border-radius: 50%;
-  border: 2px solid #E31C25;
+  border: 2px solid #0A66C2;
 }
 
 #profile p {
@@ -73,7 +73,7 @@ ul li a {
 }
 ul li a:hover {
   background: black;
-  border: 1.5px solid #E31C25;
+  border: 1.5px solid #0A66C2;
 }
 
 #social-links {
@@ -97,5 +97,5 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: #E31C25;
+  background: #0A66C2;
 }

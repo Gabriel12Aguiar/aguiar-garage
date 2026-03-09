@@ -6,7 +6,8 @@
 
 body {
   background: url(./assets/solid-black-background-9ctb77194tdactsh.jpg);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   height: 100vh;
 }
@@ -23,10 +24,57 @@ body {
   padding-bottom: 5px;
 }
 
+/* ajuste para a imagem */
 #profile img {
   width: 120px;
+}
+
+/* CONTAINER DA LOGO */
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* LOGO */
+.logo {
+  width: 120px;
   border-radius: 50%;
-  border: 2px solid #0A66C2;
+  border: 2px solid #0a66c2;
+  position: relative;
+  z-index: 2;
+}
+
+/* EFEITO DE LUZ ATRÁS DA LOGO */
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(10,102,194,0.6) 0%, rgba(0,0,0,0) 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  animation: glowPulse 3s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* ANIMAÇÃO DO GLOW */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 #profile p {
@@ -34,13 +82,13 @@ body {
   margin-top: 10px;
   color: white;
   letter-spacing: 1px;
-   font-size: 16px;
+  font-size: 16px;
 }
 
-.performance {
+.span1 {
   font-family: "Anton", sans-serif;
-  font-size: 16px; /* ajuste fino */
-  letter-spacing: 3px; /* Anton fica melhor com espaçamento */
+  font-size: 16px;
+  letter-spacing: 1px;
   color: #fff;
 }
 
@@ -71,9 +119,10 @@ ul li a {
   -webkit-backdrop-filter: blur(4px);
   transition: background 0.2s;
 }
+
 ul li a:hover {
   background: black;
-  border: 1.5px solid #0A66C2;
+  border: 1.5px solid #0a66c2;
 }
 
 #social-links {
@@ -97,5 +146,5 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: #0A66C2;
+  background: #0a66c2;
 }

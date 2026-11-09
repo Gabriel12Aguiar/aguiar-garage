@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   color-scheme: dark;
   --bg: #080a0d;
   --text: #f4f5f7;
@@ -124,7 +124,15 @@ h1 > span, h2 > span { color: #6697ff; }
   color: var(--muted);
 }
 .hero-art { border: 1px solid var(--line); background: #000; }
-.hero-art img { display: block; width: 100%; height: auto; }
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-art { width: 100%; max-width: 300px; justify-self: center; }
+.hero-art .art-top, .hero-art .art-bottom { display: none; }
 .art-top, .art-bottom {
   display: flex;
   align-items: center;
@@ -189,3 +197,40 @@ footer > p { margin: 0; color: var(--muted); font-size: 14px; }
   .social a:hover, .inline-link:hover, .text-link:hover { color: #91b4ff; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Servi?os e informa??es de atendimento em uma coluna no celular. */
+.services { padding-block: 48px; border-bottom: 1px solid var(--line); }
+.service-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.service-list li { border-bottom: 1px solid var(--line); }
+.service-list a { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding-block: 20px; min-height: 64px; }
+.service-list a > span:first-child { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 30px; font-weight: 600; line-height: 1.2; }
+.service-action { display: flex; align-items: center; gap: 14px; color: #91b4ff; font-size: 13px; }
+.service-action b { font-size: 20px; }
+.opening-hours { margin-top: 24px; padding: 22px; border: 1px solid var(--line); background: #101318; }
+.opening-hours h3 { margin: 0 0 20px; font-size: 28px; }
+.opening-hours dl { margin: 0; }
+.opening-hours dl > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding-block: 10px; }
+.opening-hours dt { color: var(--muted); }
+.opening-hours dd { margin: 0; font-weight: 600; }
+
+/* Comparativo da lavagem de motor. */
+.engine-service { padding-block: 20px; }
+.engine-service h3 { margin: 0 0 16px; font-size: 30px; line-height: 1.2; }
+.engine-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.engine-gallery figure { min-width: 0; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #101318; }
+.engine-gallery figcaption { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; font-size: 12px; font-weight: 700; letter-spacing: .5px; }
+.engine-gallery figcaption span { font-size: 12px; font-weight: 400; letter-spacing: 0; color: var(--muted); }
+.engine-gallery figure:last-child figcaption { color: #91b4ff; }
+.engine-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+@media (max-width: 359px) { .engine-gallery { grid-template-columns: minmax(0, 1fr); } }
+
+/* Foto do servi?o de polimento. */
+.photo-service { padding-block: 20px; }
+.photo-service h3 { margin: 0 0 16px; font-size: 30px; line-height: 1.2; }
+.photo-service figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #101318; }
+.photo-service img { display: block; width: 100%; height: auto; }
+
+.service-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 10px; }
+.service-photos figure { min-width: 0; }
+.service-photos img { aspect-ratio: 1; object-fit: contain; }
+.photo-service figcaption { padding: 8px 10px; color: var(--muted); font-size: 12px; line-height: 1.5; }
